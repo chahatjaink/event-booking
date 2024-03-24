@@ -5,10 +5,12 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  local:
-    push: false
+  # local:
+  #   push: false
+  googleCloudBuild:
+    projectId: booking-dev-417719
   artifacts:
-    - image: chahatjain/auth
+    - image: us.gcr.io/booking-dev-417719/auth
       context: auth
       docker:
         dockerfile: Dockerfile

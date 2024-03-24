@@ -10,8 +10,8 @@ spec:
     - host: booking.dev
       http:
         paths:
-          - path: /api/user/?(.*)
-            pathType: ImplementationSpecific
+          - path: /api/users
+            pathType: Prefix
             backend:
               service:
                 name: auth-srv

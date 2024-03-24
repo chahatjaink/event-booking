@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: chahatjain/auth
+          image: us.gcr.io/booking-dev-417719/auth
 ---
 apiVersion: v1
 kind: Service

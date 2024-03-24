@@ -1,10 +1,14 @@
 const express = require("express");
-const app = express();
-const cors = require("cors");
+import { Application, Request, Response } from "express";
 
-app.use(cors());
+const app: Application = express();
 app.use(express.json());
 
-app.listen("3001", () => {
-  console.log("Auth server is running on port 3001");
+app.get("/api/users", (req: Request, res: Response) => {
+  res.send("Hi there!");
+});
+
+app.listen(3000, () => {
+  console.log("lllllllllllllllllllllllllllllllllllllllllllllllll");
+  console.log("Auth server is running on port 3000!!!!!");
 });
